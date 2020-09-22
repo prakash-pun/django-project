@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'crispy_forms',
     'rest_framework',
     'social_django',
+
     'home.apps.HomeConfig',
     'ads.apps.AdsConfig',
-
-    # 'unesco.apps.UnescoConfig',
+    'polls.apps.PollsConfig',
+    'autos.apps.AutosConfig',
+    'cats.apps.CatsConfig',
 
 ]
 
