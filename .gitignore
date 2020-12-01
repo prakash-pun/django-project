@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 __pycache__
 *.sqlite3
+=======
+*__pycache__
+*.sqlite3
+>>>>>>> parent of d4724d7 (Update gitignore file)
