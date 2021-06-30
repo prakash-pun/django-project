@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
 
-    # Extensions - installed with pip3 / requirements.txt
     'django_extensions',
     'crispy_forms',
     'rest_framework',
@@ -54,7 +53,6 @@ INSTALLED_APPS = [
 
 ]
 
-# When we get to crispy forms :)
 CRISPY_TEMPLATE_PACK = 'bootstrap3'  # Add
 
 MIDDLEWARE = [
@@ -65,7 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'social_django.middleware.SocialAuthExceptionMiddleware',   # Add
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -81,9 +79,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'home.context_processors.settings',      # Add
-                'social_django.context_processors.backends',  # Add
-                'social_django.context_processors.login_redirect', # Add
+                'home.context_processors.settings',      
+                'social_django.context_processors.backends',  
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -158,8 +156,6 @@ REST_FRAMEWORK = {
 # except:
 #     print('When you want to use social login, please see mysite/github_settings-dist.py')
 
-# https://python-social-auth.readthedocs.io/en/latest/configuration/django.html#authentication-backends
-# https://simpleisbetterthancomplex.com/tutorial/2016/10/24/how-to-add-social-login-to-django.html
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
     # 'social_core.backends.twitter.TwitterOAuth',
@@ -171,13 +167,9 @@ AUTHENTICATION_BACKENDS = (
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
 
-# Don't set default LOGIN_URL - let django.contrib.auth set it when it is loaded
-# LOGIN_URL = '/accounts/login'
 
 # https://coderwall.com/p/uzhyca/quickly-setup-sql-query-logging-django
-# https://stackoverflow.com/questions/12027545/determine-if-django-is-running-under-the-development-server
-
-'''  # Leave off for now
+'''  
 import sys
 if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
     print('Running locally')
