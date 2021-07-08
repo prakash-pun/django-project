@@ -1,20 +1,13 @@
 {% extends "base.html" %}
-<html>
-<head>
-    <title>{{ settings.APP_NAME }}</title>
-</head>
-<body>
-    {% block content %}
-    <h1>Welcome to {{ settings.APP_NAME }}</h1>
-    <ul>
-        <li><a href='home'>HOME</a></li>
-        <li><a href='autos'>AUTOS</a></li>
-        <li><a href='ads'>ADS</a></li>
-        <li><a href='cats'>CATS</a></li>
-        <li><a href='polls'>POLLS</a></li>
-        <li><b>users</b> - One table model / SQL - uses the django shell
-            and <a href="admin" target="">admin</a></li>
-    </ul>
-    {% endblock content %}
-</body>
-</html>
+{% block content %}
+<h1>Welcome to {{ settings.APP_NAME }}</h1>
+<ul>
+    <li><a href='home'>HOME</a></li>
+    <li><a href='autos'>AUTOS</a></li>
+    <li><a href='ads'>ADS</a></li>
+    <li><a href='cats'>CATS</a></li>
+    <li><a href='polls'>POLLS</a></li>
+    <li><b>users</b> - One table model / SQL - uses the django shell
+        and <a href="admin" target="">admin</a></li>
+</ul>
+{% endblock content %}

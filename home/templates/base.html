@@ -27,6 +27,7 @@
          </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+         {% if user.is_authenticated %}
          <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                <img style="width: 25px;" src="{{ user|gravatar:60 }}" /><b class="caret"></b>
@@ -35,6 +36,11 @@
                <li><a href="{% url 'logout' %}?next={% url 'ads:all' %}">Logout</a></li>
             </ul>
          </li>
+         {% else %}
+         <li>
+            <a href="{% url 'login' %}?next={% url 'ads:all' %}">Login</a>
+            </li>
+         {% endif %}
       </ul>
    </div>
 </nav>
