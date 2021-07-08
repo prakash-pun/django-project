@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 __pycache__
 *.sqlite3
-=======
-*__pycache__
-*.sqlite3
->>>>>>> parent of d4724d7 (Update gitignore file)
+.env
+
+SOCIAL_AUTH_GITHUB_KEY = 'your key'
+SOCIAL_AUTH_GITHUB_SECRET = 'your secret key'
