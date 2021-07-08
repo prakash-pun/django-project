@@ -150,9 +150,9 @@ REST_FRAMEWORK = {
 
 # Configure the social login
 try:
-    from . import github_settings
-    SOCIAL_AUTH_GITHUB_KEY = github_settings.SOCIAL_AUTH_GITHUB_KEY
-    SOCIAL_AUTH_GITHUB_SECRET = github_settings.SOCIAL_AUTH_GITHUB_SECRET
+    from . import social_settings
+    SOCIAL_AUTH_GITHUB_KEY = social_settings.SOCIAL_AUTH_GITHUB_KEY
+    SOCIAL_AUTH_GITHUB_SECRET = social_settings.SOCIAL_AUTH_GITHUB_SECRET
 except:
     print('When you want to use social login, please see mysite/github_settings.py')
 
