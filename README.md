@@ -1,18 +1,22 @@
 # django-project
-## Run the application
+## To Run the application
 
 ```
-> virtualenv env
-> env\Scripts\activate
+> virtualenv venv
+> venv\Scripts\activate
 > pip install -r requirements.txt
-> python manage.py runserver
 ```
 
-- on `mysite/github_settings.py` chage the following
+- create `social_settings.py` on `mysite` folder i.e. `mysite/github_settings.py` and add the following
 ```
 SOCIAL_AUTH_GITHUB_KEY = 'your key'
 SOCIAL_AUTH_GITHUB_SECRET = 'your secret key'
 ```
 
-`happy coding 😁`
+```
+> python manage.py makemigrations
+> python manage.py migrate
+> python manage.py runserver
+```
 
+`happy coding 😁`
